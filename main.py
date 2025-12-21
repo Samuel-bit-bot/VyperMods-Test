@@ -158,15 +158,15 @@ async def on_member_remove(member):
         
         # Crear mensaje de despedida (Completando tu código)
         embed = discord.Embed(
-            title=f"**👋 ¡Adiós, {member.display_name}!**",
-            description=f"**{member.mention}** ha abandonado el servidor.",
+            title=f"**Hasta luego sano {member.display_name}**",
+            description=f"**{member.mention}** Ojala no vuelvas",
             color=discord.Color.dark_red(),
             timestamp=discord.utils.utcnow()
         )
         
         embed.add_field(
             name="Información",
-            value=f"Se fue el usuario: `{member.name}#{member.discriminator}`",
+            value=f"Se fue un gay: `{member.name}#{member.discriminator}`",
             inline=False
         )
         
@@ -176,9 +176,18 @@ async def on_member_remove(member):
             inline=True
         )
 
-        embed.set_thumbnail(url=member.display_avatar.url)
-        embed.set_footer(text=f"ID de Usuario: {member.id}")
+        # Añadir imagen grande (GIF)
+        embed.set_image(url="https://github.com/Samuel-bit-bot/URLS/releases/download/v1/Logo-VyperMods.png")
 
+        # Añadir thumbnail con logo estático
+        embed.set_thumbnail(url="https://github.com/Samuel-bit-bot/URLS/releases/download/v1/banner.gif")
+
+        # Añadir pie de página con ícono estático
+        embed.set_footer(
+            text="Created by MonitoSamuel",
+            icon_url="https://github.com/Samuel-bit-bot/URLS/releases/download/v1/Logo-VyperMods.png"
+        )
+        
         await goodbye_channel.send(embed=embed)
 
     except Exception as e:
