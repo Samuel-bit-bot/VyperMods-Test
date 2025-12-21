@@ -158,7 +158,7 @@ async def on_member_remove(member):
         
         # Crear mensaje de despedida (Completando tu código)
         embed = discord.Embed(
-            title=f"**Hasta luego sano {member.display_name}**",
+            title=f"**👋 𝗔𝗗𝗜𝗢𝗦 𝗗𝗘 𝗩𝗬𝗣𝗘𝗥 𝗠𝗢𝗗𝗦 👋**",
             description=f"**{member.mention}** Ojala no vuelvas",
             color=discord.Color.dark_red(),
             timestamp=discord.utils.utcnow()
